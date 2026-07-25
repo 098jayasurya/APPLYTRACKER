@@ -1,0 +1,27 @@
+### List all applications
+GET http://localhost:8080/api/applications
+
+### Create application
+POST http://localhost:8080/api/applications
+Content-Type: application/json
+
+{
+  "companyName": "Stripe",
+  "role": "Java Backend Intern",
+  "location": "Remote",
+  "status": "APPLIED",
+  "applicationDate": "2026-07-25",
+  "deadline": "2026-08-10",
+  "notes": "Applied through careers page."
+}
+
+### Search applications
+GET http://localhost:8080/api/applications/search?keyword=java
+
+### Update status
+PATCH http://localhost:8080/api/applications/1/status
+Content-Type: application/json
+
+{
+  "status": "INTERVIEW"
+}
